@@ -1,0 +1,4 @@
+public static boolean isPalindrome(String text) {
+	StringBuilder sb = new StringBuilder(text).reverse();
+    return text.replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(sb.toString().replaceAll("[^a-zA-Z0-9]", ""));
+}
