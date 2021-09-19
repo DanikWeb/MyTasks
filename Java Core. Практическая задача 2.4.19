@@ -1,0 +1,18 @@
+public static String printTextPerRole(String[] roles, String[] textLines) {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < roles.length; i++) {
+        sb.append(roles[i]);
+        sb.append(":");
+        sb.append("\n");
+        for (int j = 0; j < textLines.length; j++) {
+            if (textLines[j].startsWith(roles[i] + ":")) {
+                sb.append(j + 1);
+                sb.append(")");
+                sb.append(textLines[j].substring(roles[i].length() + 1));
+                sb.append("\n");
+            }
+        }
+        sb.append("\n");
+    }
+    return sb.toString();
+}
