@@ -1,0 +1,3 @@
+public int drawisMonitorsCounter(int monitors, int programmers) {
+	return monitors % programmers;
+}
